@@ -1,0 +1,51 @@
+---
+title: "HongxiaoYU_Assignment#8"
+output: html_notebook
+author: "Hongxiao_YU"
+date: "April_4_2020"
+---
+
+ 
+
+
+*** question 1
+# note:
+# a = a data frame with the individual item responses
+# (individuals in rows and items in columns)
+# b = a numeric with the scale used for the items
+# c = a numeric vector indicating which item numbers should be #reverse scored
+```{r}
+datareverse <- function (a,b,c) {
+  # load in a data frame that is the original data frame
+ original_data <- read.csv("a", header = TRUE, sep = ",")
+  # add an attitional column
+ additional_column <- c(b-original_data[,c])
+  # combine two columns                               
+ reversed_data <- cbind(original_data, additional_column)
+ print(reversed_data)
+}
+
+```
+***
+
+*** question 2
+# create a CSV file
+```{r}
+row1 <- c(2, 3, 4, 6, 3, 3, 4, 1)
+row2 <- c(2, 3, 4, 6, 3, 5, 1, 6)
+row3 <- c(2, 4, 6, 1, 5, 2, 3, 5)
+row4 <- c(3, 2, 4, 5, 2, 4, 5, 4)
+row5 <- c(2, 1, 4, 2, 5, 6, 3, 2)
+data <- rbind(row1, row2, row3, row4, row5)
+write.csv(data, 'hongxiao_csv')
+data
+```
+
+# send it to my function for scoring
+```{r}
+library(here)
+csv.file <- read.csv(here(data, "hongxiao_csv"))
+datareverse(csv.file, 6, 1)
+```
+
+

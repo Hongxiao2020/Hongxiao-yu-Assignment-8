@@ -44,7 +44,7 @@ data
 # send it to my function for scoring
 ```{r}
 library(here)
-csv.file <- read.csv(here(data, "hongxiao_csv"))
+csv.file <- read.csv(here("data", "hongxiao_csv"))
 datareverse(csv.file, 6, 1)
 ```
 

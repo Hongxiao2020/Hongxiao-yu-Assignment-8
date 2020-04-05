@@ -1773,9 +1773,8 @@ summary {
 <p>*** question 2 # create a CSV file</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjcmVhdGUgYSBDU1YgZmlsZVxucm93MSA8LSBjKDIsIDMsIDQsIDYsIDMsIDMsIDQsIDEpXG5yb3cyIDwtIGMoMiwgMywgNCwgNiwgMywgNSwgMSwgNilcbnJvdzMgPC0gYygyLCA0LCA2LCAxLCA1LCAyLCAzLCA1KVxucm93NCA8LSBjKDMsIDIsIDQsIDUsIDIsIDQsIDUsIDQpXG5yb3c1IDwtIGMoMiwgMSwgNCwgMiwgNSwgNiwgMywgMilcbmRhdGEgPC0gcmJpbmQocm93MSwgcm93Miwgcm93Mywgcm93NCwgcm93NSlcbndyaXRlLmNzdihkYXRhLCAnaG9uZ3hpYW9fY3N2JylcbmRhdGFcbmBgYCJ9 -->
-<pre class="r"><code># create a CSV file
-row1 &lt;- c(2, 3, 4, 6, 3, 3, 4, 1)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm93MSA8LSBjKDIsIDMsIDQsIDYsIDMsIDMsIDQsIDEpXG5yb3cyIDwtIGMoMiwgMywgNCwgNiwgMywgNSwgMSwgNilcbnJvdzMgPC0gYygyLCA0LCA2LCAxLCA1LCAyLCAzLCA1KVxucm93NCA8LSBjKDMsIDIsIDQsIDUsIDIsIDQsIDUsIDQpXG5yb3c1IDwtIGMoMiwgMSwgNCwgMiwgNSwgNiwgMywgMilcbmRhdGEgPC0gcmJpbmQocm93MSwgcm93Miwgcm93Mywgcm93NCwgcm93NSlcbndyaXRlLmNzdihkYXRhLCAnaG9uZ3hpYW9fY3N2JylcbmRhdGFcbmBgYCJ9 -->
+<pre class="r"><code>row1 &lt;- c(2, 3, 4, 6, 3, 3, 4, 1)
 row2 &lt;- c(2, 3, 4, 6, 3, 5, 1, 6)
 row3 &lt;- c(2, 4, 6, 1, 5, 2, 3, 5)
 row4 &lt;- c(3, 2, 4, 5, 2, 4, 5, 4)
@@ -1784,19 +1783,13 @@ data &lt;- rbind(row1, row2, row3, row4, row5)
 write.csv(data, 'hongxiao_csv')
 data</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXSBbLDRdIFssNV1cbnJvdzEgICAgMiAgICAzICAgIDQgICAgNiAgICAzXG5yb3cyICAgIDIgICAgMyAgICA0ICAgIDYgICAgM1xucm93MyAgICAyICAgIDQgICAgNiAgICAxICAgIDVcbnJvdzQgICAgMyAgICAyICAgIDQgICAgNSAgICAyXG5yb3c1ICAgIDIgICAgMSAgICA0ICAgIDIgICAgNVxuICAgICBbLDZdIFssN10gWyw4XVxucm93MSAgICAzICAgIDQgICAgMVxucm93MiAgICA1ICAgIDEgICAgNlxucm93MyAgICAyICAgIDMgICAgNVxucm93NCAgICA0ICAgIDUgICAgNFxucm93NSAgICA2ICAgIDMgICAgMlxuIn0= -->
-<pre><code>     [,1] [,2] [,3] [,4] [,5]
-row1    2    3    4    6    3
-row2    2    3    4    6    3
-row3    2    4    6    1    5
-row4    3    2    4    5    2
-row5    2    1    4    2    5
-     [,6] [,7] [,8]
-row1    3    4    1
-row2    5    1    6
-row3    2    3    5
-row4    4    5    4
-row5    6    3    2</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXSBbLDRdIFssNV0gWyw2XSBbLDddIFssOF1cbnJvdzEgICAgMiAgICAzICAgIDQgICAgNiAgICAzICAgIDMgICAgNCAgICAxXG5yb3cyICAgIDIgICAgMyAgICA0ICAgIDYgICAgMyAgICA1ICAgIDEgICAgNlxucm93MyAgICAyICAgIDQgICAgNiAgICAxICAgIDUgICAgMiAgICAzICAgIDVcbnJvdzQgICAgMyAgICAyICAgIDQgICAgNSAgICAyICAgIDQgICAgNSAgICA0XG5yb3c1ICAgIDIgICAgMSAgICA0ICAgIDIgICAgNSAgICA2ICAgIDMgICAgMlxuIn0= -->
+<pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+row1    2    3    4    6    3    3    4    1
+row2    2    3    4    6    3    5    1    6
+row3    2    4    6    1    5    2    3    5
+row4    3    2    4    5    2    4    5    4
+row5    2    1    4    2    5    6    3    2</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1804,20 +1797,20 @@ row5    6    3    2</code></pre>
 <h1>send it to my function for scoring</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShoZXJlKVxuY3N2LmZpbGUgPC0gcmVhZC5jc3YoaGVyZShkYXRhLCBcImhvbmd4aWFvX2NzdlwiKSlcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShoZXJlKVxuY3N2LmZpbGUgPC0gcmVhZC5jc3YoaGVyZShcImRhdGFcIiwgXCJob25neGlhb19jc3ZcIikpXG5kYXRhcmV2ZXJzZShjc3YuZmlsZSwgNiwgMSlcbmBgYCJ9 -->
 <pre class="r"><code>library(here)
-csv.file &lt;- read.csv(here(data, &quot;hongxiao_csv&quot;))</code></pre>
+csv.file &lt;- read.csv(here(&quot;data&quot;, &quot;hongxiao_csv&quot;))
+datareverse(csv.file, 6, 1)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gZmlsZS5wYXRoKFwiL1VzZXJzL2NoYXJsb3R0ZS9EZXNrdG9wL0NvdXJzZS8yMDIwIFNwcmluZy9FRFJNIDcxOC9Bc3NpZ25tZW50L0Fzc2lnbm1lbnQgIzcvR2l0UmVwb3MvSG9uZ3hpYW8geXUgQXNzaWdubWVudCM4XCIsICA6IFxuICBjYW5ub3QgY29lcmNlIHR5cGUgJ2Nsb3N1cmUnIHRvIHZlY3RvciBvZiB0eXBlICdjaGFyYWN0ZXInXG4ifQ== -->
-<pre><code>Error in file.path(&quot;/Users/charlotte/Desktop/Course/2020 Spring/EDRM 718/Assignment/Assignment #7/GitRepos/Hongxiao yu Assignment#8&quot;,  : 
-  cannot coerce type 'closure' to vector of type 'character'</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiY2Fubm90IG9wZW4gZmlsZSAnYSc6IE5vIHN1Y2ggZmlsZSBvciBkaXJlY3RvcnlFcnJvciBpbiBmaWxlKGZpbGUsIFwicnRcIikgOiBjYW5ub3Qgb3BlbiB0aGUgY29ubmVjdGlvblxuIn0= -->
+<pre><code>cannot open file 'a': No such file or directoryError in file(file, &quot;rt&quot;) : cannot open the connection</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiSG9uZ3hpYW9ZVV9Bc3NpZ25tZW50IzgiCm91dHB1dDogaHRtbF9ub3RlYm9vawphdXRob3I6ICJIb25neGlhb19ZVSIKZGF0ZTogIkFwcmlsXzRfMjAyMCIKLS0tCgogCgoKKioqIHF1ZXN0aW9uIDEKIyBub3RlOgojIGEgPSBhIGRhdGEgZnJhbWUgd2l0aCB0aGUgaW5kaXZpZHVhbCBpdGVtIHJlc3BvbnNlcwojIChpbmRpdmlkdWFscyBpbiByb3dzIGFuZCBpdGVtcyBpbiBjb2x1bW5zKQojIGIgPSBhIG51bWVyaWMgd2l0aCB0aGUgc2NhbGUgdXNlZCBmb3IgdGhlIGl0ZW1zCiMgYyA9IGEgbnVtZXJpYyB2ZWN0b3IgaW5kaWNhdGluZyB3aGljaCBpdGVtIG51bWJlcnMgc2hvdWxkIGJlICNyZXZlcnNlIHNjb3JlZApgYGB7cn0KZGF0YXJldmVyc2UgPC0gZnVuY3Rpb24gKGEsYixjKSB7CiAgIyBsb2FkIGluIGEgZGF0YSBmcmFtZSB0aGF0IGlzIHRoZSBvcmlnaW5hbCBkYXRhIGZyYW1lCiBvcmlnaW5hbF9kYXRhIDwtIHJlYWQuY3N2KCJhIiwgaGVhZGVyID0gVFJVRSwgc2VwID0gIiwiKQogICMgYWRkIGFuIGF0dGl0aW9uYWwgY29sdW1uCiBhZGRpdGlvbmFsX2NvbHVtbiA8LSBjKGItb3JpZ2luYWxfZGF0YVssY10pCiAgIyBjb21iaW5lIHR3byBjb2x1bW5zICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogcmV2ZXJzZWRfZGF0YSA8LSBjYmluZChvcmlnaW5hbF9kYXRhLCBhZGRpdGlvbmFsX2NvbHVtbikKIHByaW50KHJldmVyc2VkX2RhdGEpCn0KCmBgYAoqKioKCioqKiBxdWVzdGlvbiAyCiMgY3JlYXRlIGEgQ1NWIGZpbGUKYGBge3J9CnJvdzEgPC0gYygyLCAzLCA0LCA2LCAzLCAzLCA0LCAxKQpyb3cyIDwtIGMoMiwgMywgNCwgNiwgMywgNSwgMSwgNikKcm93MyA8LSBjKDIsIDQsIDYsIDEsIDUsIDIsIDMsIDUpCnJvdzQgPC0gYygzLCAyLCA0LCA1LCAyLCA0LCA1LCA0KQpyb3c1IDwtIGMoMiwgMSwgNCwgMiwgNSwgNiwgMywgMikKZGF0YSA8LSByYmluZChyb3cxLCByb3cyLCByb3czLCByb3c0LCByb3c1KQp3cml0ZS5jc3YoZGF0YSwgJ2hvbmd4aWFvX2NzdicpCmRhdGEKYGBgCgojIHNlbmQgaXQgdG8gbXkgZnVuY3Rpb24gZm9yIHNjb3JpbmcKYGBge3J9CmxpYnJhcnkoaGVyZSkKY3N2LmZpbGUgPC0gcmVhZC5jc3YoaGVyZShkYXRhLCAiaG9uZ3hpYW9fY3N2IikpCmRhdGFyZXZlcnNlKGNzdi5maWxlLCA2LCAxKQpgYGAKCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiSG9uZ3hpYW9ZVV9Bc3NpZ25tZW50IzgiCm91dHB1dDogaHRtbF9ub3RlYm9vawphdXRob3I6ICJIb25neGlhb19ZVSIKZGF0ZTogIkFwcmlsXzRfMjAyMCIKLS0tCgogCgoKKioqIHF1ZXN0aW9uIDEKIyBub3RlOgojIGEgPSBhIGRhdGEgZnJhbWUgd2l0aCB0aGUgaW5kaXZpZHVhbCBpdGVtIHJlc3BvbnNlcwojIChpbmRpdmlkdWFscyBpbiByb3dzIGFuZCBpdGVtcyBpbiBjb2x1bW5zKQojIGIgPSBhIG51bWVyaWMgd2l0aCB0aGUgc2NhbGUgdXNlZCBmb3IgdGhlIGl0ZW1zCiMgYyA9IGEgbnVtZXJpYyB2ZWN0b3IgaW5kaWNhdGluZyB3aGljaCBpdGVtIG51bWJlcnMgc2hvdWxkIGJlICNyZXZlcnNlIHNjb3JlZApgYGB7cn0KZGF0YXJldmVyc2UgPC0gZnVuY3Rpb24gKGEsYixjKSB7CiAgIyBsb2FkIGluIGEgZGF0YSBmcmFtZSB0aGF0IGlzIHRoZSBvcmlnaW5hbCBkYXRhIGZyYW1lCiBvcmlnaW5hbF9kYXRhIDwtIHJlYWQuY3N2KCJhIiwgaGVhZGVyID0gVFJVRSwgc2VwID0gIiwiKQogICMgYWRkIGFuIGF0dGl0aW9uYWwgY29sdW1uCiBhZGRpdGlvbmFsX2NvbHVtbiA8LSBjKGItb3JpZ2luYWxfZGF0YVssY10pCiAgIyBjb21iaW5lIHR3byBjb2x1bW5zICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogcmV2ZXJzZWRfZGF0YSA8LSBjYmluZChvcmlnaW5hbF9kYXRhLCBhZGRpdGlvbmFsX2NvbHVtbikKIHByaW50KHJldmVyc2VkX2RhdGEpCn0KCmBgYAoqKioKCioqKiBxdWVzdGlvbiAyCiMgY3JlYXRlIGEgQ1NWIGZpbGUKYGBge3J9CnJvdzEgPC0gYygyLCAzLCA0LCA2LCAzLCAzLCA0LCAxKQpyb3cyIDwtIGMoMiwgMywgNCwgNiwgMywgNSwgMSwgNikKcm93MyA8LSBjKDIsIDQsIDYsIDEsIDUsIDIsIDMsIDUpCnJvdzQgPC0gYygzLCAyLCA0LCA1LCAyLCA0LCA1LCA0KQpyb3c1IDwtIGMoMiwgMSwgNCwgMiwgNSwgNiwgMywgMikKZGF0YSA8LSByYmluZChyb3cxLCByb3cyLCByb3czLCByb3c0LCByb3c1KQp3cml0ZS5jc3YoZGF0YSwgJ2hvbmd4aWFvX2NzdicpCmRhdGEKYGBgCgojIHNlbmQgaXQgdG8gbXkgZnVuY3Rpb24gZm9yIHNjb3JpbmcKYGBge3J9CmxpYnJhcnkoaGVyZSkKY3N2LmZpbGUgPC0gcmVhZC5jc3YoaGVyZSgiZGF0YSIsICJob25neGlhb19jc3YiKSkKZGF0YXJldmVyc2UoY3N2LmZpbGUsIDYsIDEpCmBgYAoKCg==</div>
 
 
 

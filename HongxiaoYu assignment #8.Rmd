@@ -16,17 +16,15 @@ date: "April_4_2020"
 # c = a numeric vector indicating which item numbers should be #reverse scored
 ```{r}
 datareverse <- function (a,b,c) {
-  # load in a data frame that is the original data frame
- original_data <- read.csv("a", header = TRUE, sep = ",")
   # add an attitional column
- additional_column <- c(b-original_data[,c])
-  # combine two columns                               
- reversed_data <- cbind(original_data, additional_column)
- print(reversed_data)
+ a$rev.score <- c((b + 1) - a[,c])
+ print(a)
 }
 
 ```
 ***
+
+
 
 *** question 2
 # create a CSV file
@@ -44,8 +42,50 @@ data
 # send it to my function for scoring
 ```{r}
 library(here)
-csv.file <- read.csv(here("data", "hongxiao_csv"))
-datareverse(csv.file, 6, 1)
+csv.file <- read.csv(here("data", "hongxiao_csv"),header = TRUE)
+data.1 <- datareverse(csv.file[,2:9], 6, 1)
+data.2 <- datareverse(csv.file[,2:9], 6, 2)
+data.3 <- datareverse(csv.file[,2:9], 6, 3)
+data.final <- cbind(data.1, data.2[,9], data.3[,9])
+data.final
+write.csv(data.final, 'hongxiao_final_csv')
 ```
+
+
+
+***
+Question 3
+```{r}
+library(here)
+hsb2 <- read.csv(here("data", "hsb2.csv"))
+hsb2$gender <- factor(hsb2$female, levels = c(0,1),
+                    labels = c("male", "female"))
+ggplot(data = hsb2) +
+  geom_point(mapping = aes(x = math, y = science, color = gender))
+```
+***
+
+
+***
+# Question 4
+```{r}
+ggplot(data = hsb2) +
+  geom_point(mapping = aes(x = math, y = science)) +
+  facet_wrap(~ gender)
+```
+***
+
+
+
+***
+#Question 5
+### try out geam_vlolin, it is a very interesting graph.
+```{r}
+ggplot(data = hsb2) +
+  geom_violin(mapping = aes(x = math, y = science)) +
+  facet_wrap(~ gender)
+```
+
+***
 
 
